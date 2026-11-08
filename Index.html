@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="so">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baro Academy</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  color: #222;
+}
+header {
+  background: #075985;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+button {
+  background: #0284c7;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+}
+.container {
+  padding: 15px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px #ccc;
+}
+h2 {
+  color: #075985;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🎓 Baro Academy</h1>
+  <p id="subtitle">Ku baro Computer iyo Programming</p>
+  <button onclick="changeLanguage()">🌐 Somali / English</button>
+</header>
+
+<div class="container">
+
+<div class="card">
+  <h2 id="welcome">Ku soo dhawoow Baro Academy!</h2>
+  <p id="intro">
+    Halkan waxaad ku baran kartaa Computer,
+    Programming iyo Technology.
+  </p>
+</div>
+
+<div class="card">
+  <h2 id="computer">💻 Computer Lessons</h2>
+  <h3 id="lesson1">Casharka 1: Waa maxay Computer?</h3>
+  <p id="content1">
+    Computer waa qalab elektaroonik ah oo
+    xogta qaata, farsameeya, kadibna soo saara.
+  </p>
+  <button onclick="showLesson(1)" id="btn1">
+    Baro Casharka
+  </button>
+  <p id="extra1"></p>
+</div>
+
+<div class="card">
+  <h2 id="programming">👨‍💻 Programming</h2>
+  <h3 id="lesson2">Casharka 2: Waa maxay Programming?</h3>
+  <p id="content2">
+    Programming waa habka loo qoro amarro
+    uu Computer-ku fahmayo.
+  </p>
+  <button onclick="showLesson(2)" id="btn2">
+    Baro Casharka
+  </button>
+  <p id="extra2"></p>
+</div>
+
+<div class="card">
+  <h2 id="javascript">JavaScript</h2>
+  <p id="jscontent">
+    JavaScript waa luuqad programming
+    oo website-yada ka dhigta kuwo shaqaynaya.
+  </p>
+  <button onclick="alert('Hambalyo! Waxaad bilowday barashada JavaScript!')">
+    Start Learning
+  </button>
+</div>
+
+</div>
+
+<footer>
+  <p>© 2026 Baro Academy</p>
+</footer>
+
+<script>
+let english = false;
+
+function changeLanguage() {
+  english = !english;
+
+  if (english) {
+    document.getElementById("subtitle").innerText =
+      "Learn Computer and Programming";
+
+    document.getElementById("welcome").innerText =
+      "Welcome to Baro Academy!";
+
+    document.getElementById("intro").innerText =
+      "Learn Computer, Programming and Technology here.";
+
+    document.getElementById("computer").innerText =
+      "💻 Computer Lessons";
+
+    document.getElementById("lesson1").innerText =
+      "Lesson 1: What is a Computer?";
+
+    document.getElementById("content1").innerText =
+      "A computer is an electronic device that receives, processes and outputs data.";
+
+    document.getElementById("programming").innerText =
+      "👨‍💻 Programming";
+
+    document.getElementById("lesson2").innerText =
+      "Lesson 2: What is Programming?";
+
+    document.getElementById("content2").innerText =
+      "Programming is writing instructions that a computer understands.";
+
+    document.getElementById("javascript").innerText =
+      "JavaScript";
+
+    document.getElementById("jscontent").innerText =
+      "JavaScript is a programming language that makes websites interactive.";
+
+  } else {
+    location.reload();
+  }
+}
+
+function showLesson(number) {
+  if (number === 1) {
+    document.getElementById("extra1").innerText =
+      english
+      ? "A computer has hardware and software."
+      : "Computer-ku wuxuu leeyahay Hardware iyo Software.";
+  }
+
+  if (number === 2) {
+    document.getElementById("extra2").innerText =
+      english
+      ? "Example: HTML, CSS and JavaScript."
+      : "Tusaale: HTML, CSS iyo JavaScript.";
+  }
+}
+</script>
+
+</body>
+</html>
